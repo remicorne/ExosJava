@@ -2,33 +2,40 @@ package DisquesAnneaux;
 
 public class Couronne extends Disque {
 	
-	private double r2;
+	private Disque disqueInterieur;
 	
-	public Couronne(double x, double y, double r, double r2) {
-		super(x, y, r);
-		this.r2 = r2;
+	/**
+	 * 
+	 * @param x abscisse du centre
+	 * @param y ordonnée du centre
+	 * @param r rayon ext
+	 * @param r2 rayon int
+	 */
+	public Couronne(double x, double y, double r1, double r2) {
+		super(x, y, r1);
+		this.disqueInterieur = new Disque(x, y, r2);
 	}
-	
-	public double getR2() {
-		return r2;
+
+	public Disque getDisqueInterieur() {
+		return disqueInterieur;
 	}
 	
 	public String toString() {
-		return super.toString() + ", rayon trou = " + getR2();
+		return super.toString() + ", rayon trou = " + getDisqueInterieur().getR();
 	}
 	
 	@Override
-	public boolean equals(Object obj) {
-		if (obj instanceof Couronne) {
-			Couronne courone = (Couronne) obj;
-			return super.equals(obj) && getR2() == courone.getR2();
+	public boolean equals(Object unObj) {
+		if (unObj instanceof Couronne) {
+			Couronne uneCourone = (Couronne) unObj;
+			return super.equals(unObj) && getDisqueInterieur().equals(uneCourone.getDisqueInterieur()); // checker que ca marche encore
 			}
 		return false;
 	}
 	
 	@Override
 	public double aire() {	
-		return super.aire() - new Disque(getX(), getY(), getR2()).aire();
+		return super.aire() - getDisqueInterieur().aire();
 	}
 	
 	

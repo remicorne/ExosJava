@@ -1,4 +1,4 @@
-package Demineur;
+package Vue;
 
 public class Main2 {
 

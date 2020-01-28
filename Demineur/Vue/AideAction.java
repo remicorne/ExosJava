@@ -1,13 +1,13 @@
-package Demineur;
+package Vue;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class QuitterAction implements ActionListener{
+public class AideAction implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		System.exit(0);
+		System.out.println("Voici l'aide");
 	}
 
 }

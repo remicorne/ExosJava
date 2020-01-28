@@ -1,4 +1,4 @@
-package Demineur;
+package Modele;
 
 public class Main {
 

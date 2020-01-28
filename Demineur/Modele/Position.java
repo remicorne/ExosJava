@@ -1,8 +1,8 @@
-package Demineur;
+package Modele;
 
 public class Position {
-	int ligne;
-	int colonne;
+	private int ligne;
+	private int colonne;
 	
 	public Position(int ligne, int colonne) {
 		this.ligne = ligne;

@@ -1,7 +1,4 @@
-package Demineur;
-
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+package Vue;
 
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
